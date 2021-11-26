@@ -3,9 +3,10 @@ package com.practice.javaoop.Logic;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BubbleSort <T extends Comparable<T>> {
+public class BubbleSort <T extends Comparable<T>> implements Sort<T> {
 
-    public List<T> sort(List<T> list){
+    @Override
+    public List<T> sort(List<T> list) {
         List<T> output = new ArrayList<>(list);
 
         for (int i = output.size() -1; i > 0; i--) {
